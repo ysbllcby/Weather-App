@@ -1,5 +1,6 @@
 body {
     font-family: 'Open Sans', sans-serif;
+    font-size: 120%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,4 +17,32 @@ body {
     width: 100%;
     max-width: 420px;
     margin: 1em;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 5px;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+
+input.search-bar {
+    padding: 0.8em;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: 'Open Sans';
+    font-size: 100%;
+}
+
+button:hover {
+    background-color: #70797e;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
