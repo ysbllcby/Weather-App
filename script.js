@@ -22,14 +22,13 @@ let weather = {
 
     // Display in HTML
     document.querySelector(".city").innerHTML = "Weather in " + name;
-    document.querySelector(".temp").innerHTML = temp + "°C";
+    document.querySelector(".temp").innerHTML = temp + "°<span>C</span>";
     document.querySelector(".icon").src =
       "https://openweathermap.org/img/wn/" + icon + ".png";
     document.querySelector(".description").innerHTML = description;
     document.querySelector(".humidity").innerHTML =
       "Humidity: " + humidity + "%";
     document.querySelector(".wind").innerHTML = "Windspeed: " + speed + " km/h";
-    document.querySelector(".weather").classList.remove("loading");
   },
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
