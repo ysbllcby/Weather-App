@@ -1,4 +1,5 @@
 # Weather-App
+https://ysbllcby.github.io/Weather-App/
 ## HTML | CSS | Javascript | OpenWeatherMap Api
 
 Simple weather app that uses openweather api, fetches city data and shows temperature, humidity, wind speed.
