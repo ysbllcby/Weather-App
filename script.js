@@ -29,5 +29,30 @@ let weather = {
     document.querySelector(".humidity").innerHTML =
       "Humidity: " + humidity + "%";
     document.querySelector(".wind").innerHTML = "Windspeed: " + speed + " km/h";
+    document.querySelector(".weather").classList.remove("loading");
+  },
+  search: function () {
+    this.fetchWeather(document.querySelector(".search-bar").value);
   },
 };
+
+//Search bar
+document.querySelector(".search button").addEventListener("click", function () {
+  weather.search();
+});
+
+document.querySelector(".search-bar").addEventListener("keyup", function (e) {
+  if (e.key == "Enter") {
+    weather.search();
+  }
+});
+
+// Change background
+const searchBar = document.querySelector(".search-bar");
+const body = document.querySelector("body");
+
+searchBar.addEventListener("input", function () {
+  body.style.backgroundImage = `url("https://source.unsplash.com/random/1600x900/?${searchBar.value}")`;
+});
+
+weather.fetchWeather("Denver");
